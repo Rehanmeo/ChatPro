@@ -44,6 +44,8 @@ class HomeVC: UIViewController {
         btn.layer.cornerRadius = 5
         btn.clipsToBounds = true
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.tag = 1
+        btn.addTarget(self, action: #selector(buttonactions(sender:)), for: .touchUpInside)
         return btn
     }()
     
@@ -66,6 +68,8 @@ class HomeVC: UIViewController {
         btn.layer.cornerRadius = 5
         btn.clipsToBounds = true
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.tag = 2
+        btn.addTarget(self, action: #selector(buttonactions(sender:)), for: .touchUpInside)
         return btn
     }()
     
@@ -78,13 +82,21 @@ class HomeVC: UIViewController {
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
     private func setUI(){
+        
         view.addSubview(titleLabel)
         view.addSubview(sepView)
         view.addSubview(subTitleLabele)
         view.addSubview(signinButton)
         view.addSubview(orLabel)
         view.addSubview(signupButton)
+        
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
@@ -113,5 +125,4 @@ class HomeVC: UIViewController {
         
     }
     
-   
 }
