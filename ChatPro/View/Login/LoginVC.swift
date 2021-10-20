@@ -15,6 +15,7 @@ class LoginVC: UIViewController{
         btn.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
         btn.tintColor = UIColor.black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.tag = 1
         return  btn
     }()
     
@@ -159,7 +160,8 @@ class LoginVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupUI()
+        self.setupUI()
+        self.buttonaction()
     }
     
     private func setupUI(){
