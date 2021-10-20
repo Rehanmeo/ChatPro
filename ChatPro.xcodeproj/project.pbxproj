@@ -16,6 +16,7 @@
 		5D8C862D2716F3D50053F73B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D8C862C2716F3D50053F73B /* Assets.xcassets */; };
 		5D8C86302716F3D50053F73B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D8C862E2716F3D50053F73B /* LaunchScreen.storyboard */; };
 		5DF04277271FE127004BC3DA /* LoginButtonActionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF04276271FE127004BC3DA /* LoginButtonActionExt.swift */; };
+		5DF0427A271FF60E004BC3DA /* RegisterButtonActionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF04279271FF60E004BC3DA /* RegisterButtonActionExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5D8C862F2716F3D50053F73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D8C86312716F3D50053F73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF04276271FE127004BC3DA /* LoginButtonActionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonActionExt.swift; sourceTree = "<group>"; };
+		5DF04279271FF60E004BC3DA /* RegisterButtonActionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButtonActionExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5D4B25D4271D314B0063B7DF /* RegisterVC.swift */,
+				5DF04279271FF60E004BC3DA /* RegisterButtonActionExt.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF0427A271FF60E004BC3DA /* RegisterButtonActionExt.swift in Sources */,
 				5D4B25CB271CA09A0063B7DF /* HomeExtension.swift in Sources */,
 				5D4B25C2271BF7560063B7DF /* HomeVC.swift in Sources */,
 				5D8C86242716F3D20053F73B /* AppDelegate.swift in Sources */,
