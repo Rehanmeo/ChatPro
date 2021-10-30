@@ -33,6 +33,8 @@ extension LoginVC {
         
         if sender.tag == 4 {
             print("login button")
+            self.navigationController?.pushViewController(ListVC(), animated: true)
+            
         }
         
         if sender.tag == 5 {
