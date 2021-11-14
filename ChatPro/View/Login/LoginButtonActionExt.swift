@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 extension LoginVC {
     
@@ -33,12 +33,25 @@ extension LoginVC {
         
         if sender.tag == 4 {
             print("login button")
-            self.navigationController?.pushViewController(ListVC(), animated: true)
+            loginuser()
             
         }
         
         if sender.tag == 5 {
             self.navigationController?.pushViewController(RegisterVC(), animated: true)
+        }
+    }
+    
+    func loginuser(){
+        guard let email = userTxt.text else { return }
+        guard let pass = passwordTxt.text else { return }
+        Auth.auth().signIn(withEmail: email, password: pass) { result, err in
+            if let err = err {
+                self.showToast(message: "Login error please Correct Info put: \(err)", font: UIFont.systemFont(ofSize: 9))
+                return
+            }
+            self.showToast(message: "succesfully login")
+            self.navigationController?.pushViewController(ListVC(), animated: true)
         }
     }
 }
